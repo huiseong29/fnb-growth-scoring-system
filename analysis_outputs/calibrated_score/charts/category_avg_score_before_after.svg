@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="560" viewBox="0 0 1050 560">
+<rect width="100%" height="100%" fill="#FBFBFE"/>
+<text x="525.0" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#1D1D2C">카테고리별 평균 점수 변화</text>
+<line x1="90" y1="455" x2="1005" y2="455" stroke="#2B2D42"/>
+<line x1="90" y1="76" x2="90" y2="455" stroke="#2B2D42"/>
+<text x="24" y="265.5" transform="rotate(-90 24 265.5)" text-anchor="middle" font-size="14" fill="#343A40">평균 점수</text>
+<rect x="157.1" y="133.8" width="54.9" height="321.2" rx="5" fill="#6D5EF7"/>
+<text x="184.5" y="127.8" text-anchor="middle" font-size="11" font-weight="700" fill="#1D1D2C">55.3</text>
+<rect x="225.7" y="149.2" width="54.9" height="305.8" rx="5" fill="#00A6ED"/>
+<text x="253.2" y="143.2" text-anchor="middle" font-size="11" font-weight="700" fill="#1D1D2C">52.6</text>
+<text x="242.5" y="498" text-anchor="middle" font-size="13" fill="#343A40">백반·죽·국수</text>
+<rect x="462.1" y="158.0" width="54.9" height="297.0" rx="5" fill="#6D5EF7"/>
+<text x="489.6" y="152.0" text-anchor="middle" font-size="11" font-weight="700" fill="#1D1D2C">51.1</text>
+<rect x="530.7" y="156.7" width="54.9" height="298.3" rx="5" fill="#00A6ED"/>
+<text x="558.2" y="150.7" text-anchor="middle" font-size="11" font-weight="700" fill="#1D1D2C">51.4</text>
+<text x="547.5" y="498" text-anchor="middle" font-size="13" fill="#343A40">치킨</text>
+<rect x="767.1" y="187.4" width="54.9" height="267.6" rx="5" fill="#6D5EF7"/>
+<text x="794.6" y="181.4" text-anchor="middle" font-size="11" font-weight="700" fill="#1D1D2C">46.1</text>
+<rect x="835.7" y="186.7" width="54.9" height="268.3" rx="5" fill="#00A6ED"/>
+<text x="863.2" y="180.7" text-anchor="middle" font-size="11" font-weight="700" fill="#1D1D2C">46.2</text>
+<text x="852.5" y="498" text-anchor="middle" font-size="13" fill="#343A40">피자</text>
+<rect x="770" y="54" width="14" height="14" rx="3" fill="#6D5EF7"/>
+<text x="790" y="66" font-size="13" fill="#343A40">기존</text>
+<rect x="862" y="54" width="14" height="14" rx="3" fill="#00A6ED"/>
+<text x="882" y="66" font-size="13" fill="#343A40">보정</text>
+</svg>

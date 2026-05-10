@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="500.0" y="34" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#0f172a">Store Count by Grade</text>
+<line x1="90" y1="370" x2="960" y2="370" stroke="#e2e8f0" stroke-width="2"/>
+<rect x="90.00" y="325.24" width="207.00" height="44.76" fill="#16a34a" rx="4"/>
+<text x="193.50" y="317.24" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">84.0</text>
+<text x="193.50" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">A</text>
+<rect x="311.00" y="245.31" width="207.00" height="124.69" fill="#16a34a" rx="4"/>
+<text x="414.50" y="237.31" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">234.0</text>
+<text x="414.50" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">B</text>
+<rect x="532.00" y="175.51" width="207.00" height="194.49" fill="#16a34a" rx="4"/>
+<text x="635.50" y="167.51" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">365.0</text>
+<text x="635.50" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">C</text>
+<rect x="753.00" y="70.00" width="207.00" height="300.00" fill="#16a34a" rx="4"/>
+<text x="856.50" y="62.00" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">563.0</text>
+<text x="856.50" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">D</text>
+</svg>

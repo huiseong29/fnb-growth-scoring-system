@@ -1,0 +1,7 @@
+﻿model,top_n,hits,precision_at_n,capture_rate
+seoul_internal,50,18,0.36,0.14754098360655737
+seoul_internal,100,34,0.34,0.2786885245901639
+seoul_internal,200,65,0.325,0.5327868852459017
+seoul_external,50,18,0.36,0.14754098360655737
+seoul_external,100,37,0.37,0.30327868852459017
+seoul_external,200,66,0.33,0.5409836065573771

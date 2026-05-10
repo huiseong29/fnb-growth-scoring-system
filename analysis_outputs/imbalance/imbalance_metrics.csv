@@ -1,0 +1,5 @@
+﻿universe,store_count,brand_hhi,category_hhi,max_brand_share,max_category_share
+original_all,1246,0.5422,0.4893,0.6453,0.6453
+current_top100,100,0.8528,0.8514,0.9200,0.9200
+calibrated_top100,100,0.7312,0.7202,0.8400,0.8400
+balanced_recommendations,35,0.5102,0.3469,0.5714,0.4286

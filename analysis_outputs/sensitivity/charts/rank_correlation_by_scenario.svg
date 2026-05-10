@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520">
+<rect width="100%" height="100%" fill="#FBFBFE"/>
+<text x="490.0" y="42" text-anchor="middle" font-size="25" font-weight="700" fill="#1D1D2C">현재 순위와 시나리오별 순위 상관</text>
+<line x1="90" y1="410" x2="940" y2="410" stroke="#2B2D42" stroke-width="1.4"/>
+<line x1="90" y1="80" x2="90" y2="410" stroke="#2B2D42" stroke-width="1.4"/>
+<text x="24" y="245.0" transform="rotate(-90 24 245.0)" text-anchor="middle" font-size="14" fill="#343A40">순위 상관</text>
+<rect x="113.1" y="123.0" width="75.3" height="287.0" rx="6" fill="#6D5EF7"/>
+<text x="150.7" y="115.0" text-anchor="middle" font-size="13" font-weight="700" fill="#1D1D2C">1.000</text>
+<text x="150.7" y="444" text-anchor="end" font-size="12" fill="#343A40" transform="rotate(-32 150.7 444)">현재 공식 가중치</text>
+<rect x="234.5" y="125.9" width="75.3" height="284.1" rx="6" fill="#00A6ED"/>
+<text x="272.1" y="117.9" text-anchor="middle" font-size="13" font-weight="700" fill="#1D1D2C">0.990</text>
+<text x="272.1" y="444" text-anchor="end" font-size="12" fill="#343A40" transform="rotate(-32 272.1 444)">성장확률 강화</text>
+<rect x="355.9" y="133.4" width="75.3" height="276.6" rx="6" fill="#00C49A"/>
+<text x="393.6" y="125.4" text-anchor="middle" font-size="13" font-weight="700" fill="#1D1D2C">0.964</text>
+<text x="393.6" y="444" text-anchor="end" font-size="12" fill="#343A40" transform="rotate(-32 393.6 444)">Growth Alpha 강화</text>
+<rect x="477.4" y="129.8" width="75.3" height="280.2" rx="6" fill="#FFB000"/>
+<text x="515.0" y="121.8" text-anchor="middle" font-size="13" font-weight="700" fill="#1D1D2C">0.976</text>
+<text x="515.0" y="444" text-anchor="end" font-size="12" fill="#343A40" transform="rotate(-32 515.0 444)">리뷰 성장 강화</text>
+<rect x="598.8" y="127.9" width="75.3" height="282.1" rx="6" fill="#FF6B6B"/>
+<text x="636.4" y="119.9" text-anchor="middle" font-size="13" font-weight="700" fill="#1D1D2C">0.983</text>
+<text x="636.4" y="444" text-anchor="end" font-size="12" fill="#343A40" transform="rotate(-32 636.4 444)">운영 역량 강화</text>
+<rect x="720.2" y="134.7" width="75.3" height="275.3" rx="6" fill="#D65DB1"/>
+<text x="757.9" y="126.7" text-anchor="middle" font-size="13" font-weight="700" fill="#1D1D2C">0.959</text>
+<text x="757.9" y="444" text-anchor="end" font-size="12" fill="#343A40" transform="rotate(-32 757.9 444)">안정성 강화</text>
+<rect x="841.6" y="124.4" width="75.3" height="285.6" rx="6" fill="#2EC4B6"/>
+<text x="879.3" y="116.4" text-anchor="middle" font-size="13" font-weight="700" fill="#1D1D2C">0.995</text>
+<text x="879.3" y="444" text-anchor="end" font-size="12" fill="#343A40" transform="rotate(-32 879.3 444)">서울 상권 적합도 강화</text>
+</svg>

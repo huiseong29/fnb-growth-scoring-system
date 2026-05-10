@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="460" viewBox="0 0 1000 460">
+<rect width="1000" height="460" fill="white"/>
+<text x="500.0" y="34" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#0f172a">Growth Label Rate by Brand and Category (%)</text>
+<line x1="90" y1="340" x2="960" y2="340" stroke="#e2e8f0" stroke-width="2"/>
+<rect x="90.00" y="70.00" width="278.00" height="270.00" fill="#2563eb" rx="4"/>
+<text x="229.00" y="62.00" text-anchor="middle" font-family="Arial" font-size="14" fill="#0f172a">34.00</text>
+<text x="229.00" y="364" text-anchor="middle" font-family="Arial" font-size="13" fill="#0f172a">본그룹/백반·죽·국수</text>
+<rect x="386.00" y="143.81" width="278.00" height="196.19" fill="#2563eb" rx="4"/>
+<text x="525.00" y="135.81" text-anchor="middle" font-family="Arial" font-size="14" fill="#0f172a">24.70</text>
+<text x="525.00" y="364" text-anchor="middle" font-family="Arial" font-size="13" fill="#0f172a">굽네치킨/치킨</text>
+<rect x="682.00" y="195.36" width="278.00" height="144.64" fill="#2563eb" rx="4"/>
+<text x="821.00" y="187.36" text-anchor="middle" font-family="Arial" font-size="14" fill="#0f172a">18.21</text>
+<text x="821.00" y="364" text-anchor="middle" font-family="Arial" font-size="13" fill="#0f172a">굽네치킨/피자</text>
+</svg>

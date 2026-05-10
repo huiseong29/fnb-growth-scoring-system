@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480">
+<rect width="1000" height="480" fill="white"/>
+<text x="500.0" y="34" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#0f172a">Average Monthly Orders Trend</text>
+<line x1="90" y1="410" x2="920" y2="410" stroke="#e2e8f0" stroke-width="2"/>
+<line x1="90" y1="70" x2="90" y2="410" stroke="#e2e8f0" stroke-width="2"/>
+<text x="90.00" y="438" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">2025-01</text>
+<text x="193.75" y="438" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">2025-02</text>
+<text x="297.50" y="438" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">2025-03</text>
+<text x="401.25" y="438" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">2025-04</text>
+<text x="505.00" y="438" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">2025-05</text>
+<text x="608.75" y="438" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">2025-06</text>
+<text x="712.50" y="438" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">2025-07</text>
+<text x="816.25" y="438" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">2025-08</text>
+<text x="920.00" y="438" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">2025-09</text>
+<polyline points="90.00,405.81 193.75,393.36 297.50,410.00 401.25,409.24 505.00,371.46 608.75,183.33 712.50,356.86 816.25,200.25 920.00,123.32" fill="none" stroke="#2563eb" stroke-width="3"/>
+<circle cx="90.00" cy="405.81" r="4" fill="#2563eb"/>
+<circle cx="193.75" cy="393.36" r="4" fill="#2563eb"/>
+<circle cx="297.50" cy="410.00" r="4" fill="#2563eb"/>
+<circle cx="401.25" cy="409.24" r="4" fill="#2563eb"/>
+<circle cx="505.00" cy="371.46" r="4" fill="#2563eb"/>
+<circle cx="608.75" cy="183.33" r="4" fill="#2563eb"/>
+<circle cx="712.50" cy="356.86" r="4" fill="#2563eb"/>
+<circle cx="816.25" cy="200.25" r="4" fill="#2563eb"/>
+<circle cx="920.00" cy="123.32" r="4" fill="#2563eb"/>
+<rect x="800" y="60" width="14" height="14" fill="#2563eb"/>
+<text x="822" y="72" font-family="Arial" font-size="14" fill="#0f172a">Non-growth</text>
+<polyline points="90.00,197.29 193.75,384.20 297.50,315.71 401.25,302.17 505.00,112.75 608.75,140.02 712.50,160.73 816.25,70.00 920.00,111.63" fill="none" stroke="#f97316" stroke-width="3"/>
+<circle cx="90.00" cy="197.29" r="4" fill="#f97316"/>
+<circle cx="193.75" cy="384.20" r="4" fill="#f97316"/>
+<circle cx="297.50" cy="315.71" r="4" fill="#f97316"/>
+<circle cx="401.25" cy="302.17" r="4" fill="#f97316"/>
+<circle cx="505.00" cy="112.75" r="4" fill="#f97316"/>
+<circle cx="608.75" cy="140.02" r="4" fill="#f97316"/>
+<circle cx="712.50" cy="160.73" r="4" fill="#f97316"/>
+<circle cx="816.25" cy="70.00" r="4" fill="#f97316"/>
+<circle cx="920.00" cy="111.63" r="4" fill="#f97316"/>
+<rect x="800" y="84" width="14" height="14" fill="#f97316"/>
+<text x="822" y="96" font-family="Arial" font-size="14" fill="#0f172a">Growth</text>
+</svg>

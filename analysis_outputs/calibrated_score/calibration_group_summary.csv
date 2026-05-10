@@ -1,0 +1,6 @@
+﻿group_type,group_name,store_count,avg_gromong_score,avg_calibrated_score,current_A_count,calibrated_A_count,current_top100_count,calibrated_top100_count
+category,백반·죽·국수,804,55.2942,52.6471,78,130,92,84
+category,치킨,309,51.1319,51.3599,5,23,7,11
+category,피자,133,46.0735,46.1922,1,8,1,5
+brand,굽네치킨,442,49.6098,49.8049,6,31,8,16
+brand,본그룹,804,55.2942,52.6471,78,130,92,84

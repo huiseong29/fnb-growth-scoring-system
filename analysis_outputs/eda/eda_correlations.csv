@@ -1,0 +1,16 @@
+﻿metric,valid_pairs,corr_with_growth_score
+brand_adjusted_growth,11214,0.991622
+internal_growth_alpha,11214,0.991333
+category_adjusted_growth,11214,0.990462
+reply_rate,7226,0.015311
+menu_count,10998,0.004186
+review_count,11214,0.001883
+avg_delivery_menu_price,10998,0.001866
+historical_composite_growth,7476,-0.003777
+historical_internal_growth_alpha,7476,-0.007652
+store_vs_market_ticket_ratio,673,-0.017241
+order_count,11214,-0.017575
+sales_amount,11214,-0.017937
+avg_rating,7226,-0.023327
+store_avg_ticket,4073,-0.029138
+avg_reply_delay_hours,4440,-0.063048

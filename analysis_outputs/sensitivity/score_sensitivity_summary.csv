@@ -1,0 +1,8 @@
+﻿scenario,scenario_label,mean_score,median_score,top50_overlap_count,top50_overlap_rate,top100_overlap_count,top100_overlap_rate,rank_correlation_with_current,grade_A_count,grade_B_count,grade_C_count,grade_D_count
+official_current,현재 공식 가중치,53.2778,53.9499,50,1.0000,100,1.0000,1.0000,84,234,365,563
+growth_probability_focus,성장확률 강화,54.9078,57.5270,43,0.8600,91,0.9100,0.9899,116,297,298,535
+growth_alpha_focus,Growth Alpha 강화,49.7181,47.2185,44,0.8800,89,0.8900,0.9639,75,180,304,687
+review_focus,리뷰 성장 강화,51.0008,49.6868,39,0.7800,78,0.7800,0.9763,56,183,375,632
+operation_focus,운영 역량 강화,55.2140,54.6635,44,0.8800,94,0.9400,0.9832,115,297,274,560
+stability_focus,안정성 강화,57.8702,55.6472,36,0.7200,82,0.8200,0.9593,83,302,442,419
+market_fit_focus,서울 상권 적합도 강화,52.8440,52.6568,50,1.0000,95,0.9500,0.9952,81,223,365,577

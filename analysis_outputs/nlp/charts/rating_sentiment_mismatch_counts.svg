@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="540" viewBox="0 0 1000 540">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="500.0" y="38" text-anchor="middle" font-family="Arial" font-size="24" font-weight="800" fill="#0f172a">Rating-Sentiment Mismatch Counts</text>
+<line x1="90" y1="390" x2="950" y2="390" stroke="#e2e8f0" stroke-width="2"/>
+<rect x="90.00" y="72.00" width="424.00" height="318.00" fill="#dc2626" rx="5"/>
+<text x="302.00" y="64.00" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#0f172a">1,022.000</text>
+<text x="302.00" y="418" text-anchor="end" transform="rotate(-35 302.00,418)" font-family="Arial" font-size="13" fill="#0f172a">high_rating_negative_text</text>
+<rect x="526.00" y="276.12" width="424.00" height="113.88" fill="#2563eb" rx="5"/>
+<text x="738.00" y="268.12" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700" fill="#0f172a">366.000</text>
+<text x="738.00" y="418" text-anchor="end" transform="rotate(-35 738.00,418)" font-family="Arial" font-size="13" fill="#0f172a">low_rating_positive_text</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="500.0" y="34" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#0f172a">GroMong Score Distribution</text>
+<line x1="90" y1="370" x2="960" y2="370" stroke="#e2e8f0" stroke-width="2"/>
+<rect x="90.00" y="370.00" width="74.40" height="0.00" fill="#7c3aed" rx="4"/>
+<text x="127.20" y="362.00" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">0.0</text>
+<text x="127.20" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">0-10</text>
+<rect x="178.40" y="356.21" width="74.40" height="13.79" fill="#7c3aed" rx="4"/>
+<text x="215.60" y="348.21" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">12.0</text>
+<text x="215.60" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">10-20</text>
+<rect x="266.80" y="274.60" width="74.40" height="95.40" fill="#7c3aed" rx="4"/>
+<text x="304.00" y="266.60" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">83.0</text>
+<text x="304.00" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">20-30</text>
+<rect x="355.20" y="70.00" width="74.40" height="300.00" fill="#7c3aed" rx="4"/>
+<text x="392.40" y="62.00" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">261.0</text>
+<text x="392.40" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">30-40</text>
+<rect x="443.60" y="132.07" width="74.40" height="237.93" fill="#7c3aed" rx="4"/>
+<text x="480.80" y="124.07" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">207.0</text>
+<text x="480.80" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">40-50</text>
+<rect x="532.00" y="114.83" width="74.40" height="255.17" fill="#7c3aed" rx="4"/>
+<text x="569.20" y="106.83" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">222.0</text>
+<text x="569.20" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">50-60</text>
+<rect x="620.40" y="110.23" width="74.40" height="259.77" fill="#7c3aed" rx="4"/>
+<text x="657.60" y="102.23" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">226.0</text>
+<text x="657.60" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">60-70</text>
+<rect x="708.80" y="196.44" width="74.40" height="173.56" fill="#7c3aed" rx="4"/>
+<text x="746.00" y="188.44" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">151.0</text>
+<text x="746.00" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">70-80</text>
+<rect x="797.20" y="282.64" width="74.40" height="87.36" fill="#7c3aed" rx="4"/>
+<text x="834.40" y="274.64" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">76.0</text>
+<text x="834.40" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">80-90</text>
+<rect x="885.60" y="360.80" width="74.40" height="9.20" fill="#7c3aed" rx="4"/>
+<text x="922.80" y="352.80" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">8.0</text>
+<text x="922.80" y="394" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">90-100</text>
+</svg>

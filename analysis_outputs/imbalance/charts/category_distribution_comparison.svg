@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="560" viewBox="0 0 1050 560">
+<rect width="100%" height="100%" fill="#FBFBFE"/>
+<text x="525.0" y="42" text-anchor="middle" font-size="24" font-weight="700" fill="#1D1D2C">원본/기존/보정/균형형 카테고리 분포</text>
+<line x1="90" y1="460" x2="1005" y2="460" stroke="#2B2D42"/>
+<line x1="90" y1="76" x2="90" y2="460" stroke="#2B2D42"/>
+<text x="25" y="268.0" transform="rotate(-90 25 268.0)" text-anchor="middle" font-size="14" fill="#343A40">매장 수</text>
+<rect x="157.1" y="134.6" width="54.9" height="325.4" rx="5" fill="#6D5EF7"/>
+<text x="184.5" y="127.6" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D2C">804</text>
+<rect x="229.6" y="422.8" width="54.9" height="37.2" rx="5" fill="#00A6ED"/>
+<text x="257.0" y="415.8" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D2C">92</text>
+<rect x="302.0" y="426.0" width="54.9" height="34.0" rx="5" fill="#00C49A"/>
+<text x="329.5" y="419.0" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D2C">84</text>
+<rect x="374.5" y="453.9" width="54.9" height="6.1" rx="5" fill="#FFB000"/>
+<text x="402.0" y="446.9" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D2C">15</text>
+<text x="242.5" y="498" text-anchor="middle" font-size="14" fill="#343A40">백반·죽·국수</text>
+<rect x="462.1" y="334.9" width="54.9" height="125.1" rx="5" fill="#6D5EF7"/>
+<text x="489.6" y="327.9" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D2C">309</text>
+<rect x="534.6" y="457.2" width="54.9" height="2.8" rx="5" fill="#00A6ED"/>
+<text x="562.0" y="450.2" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D2C">7</text>
+<rect x="607.0" y="455.5" width="54.9" height="4.5" rx="5" fill="#00C49A"/>
+<text x="634.5" y="448.5" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D2C">11</text>
+<rect x="679.5" y="456.0" width="54.9" height="4.0" rx="5" fill="#FFB000"/>
+<text x="707.0" y="449.0" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D2C">10</text>
+<text x="547.5" y="498" text-anchor="middle" font-size="14" fill="#343A40">치킨</text>
+<rect x="767.1" y="406.2" width="54.9" height="53.8" rx="5" fill="#6D5EF7"/>
+<text x="794.6" y="399.2" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D2C">133</text>
+<rect x="839.6" y="459.6" width="54.9" height="0.4" rx="5" fill="#00A6ED"/>
+<text x="867.0" y="452.6" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D2C">1</text>
+<rect x="912.0" y="458.0" width="54.9" height="2.0" rx="5" fill="#00C49A"/>
+<text x="939.5" y="451.0" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D2C">5</text>
+<rect x="984.5" y="456.0" width="54.9" height="4.0" rx="5" fill="#FFB000"/>
+<text x="1012.0" y="449.0" text-anchor="middle" font-size="12" font-weight="700" fill="#1D1D2C">10</text>
+<text x="852.5" y="498" text-anchor="middle" font-size="14" fill="#343A40">피자</text>
+<rect x="670" y="56" width="14" height="14" rx="3" fill="#6D5EF7"/>
+<text x="690" y="68" font-size="13" fill="#343A40">원본</text>
+<rect x="788" y="56" width="14" height="14" rx="3" fill="#00A6ED"/>
+<text x="808" y="68" font-size="13" fill="#343A40">기존 Top100</text>
+<rect x="906" y="56" width="14" height="14" rx="3" fill="#00C49A"/>
+<text x="926" y="68" font-size="13" fill="#343A40">보정 Top100</text>
+<rect x="1024" y="56" width="14" height="14" rx="3" fill="#FFB000"/>
+<text x="1044" y="68" font-size="13" fill="#343A40">균형형</text>
+</svg>

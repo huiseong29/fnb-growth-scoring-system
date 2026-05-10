@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="540" viewBox="0 0 1000 540">
+<rect width="100%" height="100%" fill="#f8fafc"/>
+<text x="500.0" y="38" text-anchor="middle" font-family="Arial" font-size="24" font-weight="800" fill="#0f172a">Review Text Sentiment by Growth Label</text>
+<line x1="90" y1="430" x2="840" y2="430" stroke="#e2e8f0" stroke-width="2"/>
+<text x="277.50" y="460" text-anchor="middle" font-family="Arial" font-size="14" fill="#0f172a">Non-growth</text>
+<rect x="136.88" y="157.34" width="76.88" height="272.66" fill="#7c3aed" rx="5"/>
+<text x="175.31" y="150.34" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">0.671</text>
+<rect x="230.62" y="82.02" width="76.88" height="347.98" fill="#16a34a" rx="5"/>
+<text x="269.06" y="75.02" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">0.856</text>
+<rect x="324.38" y="413.73" width="76.88" height="16.27" fill="#dc2626" rx="5"/>
+<text x="362.81" y="406.73" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">0.040</text>
+<text x="652.50" y="460" text-anchor="middle" font-family="Arial" font-size="14" fill="#0f172a">Growth</text>
+<rect x="511.88" y="152.40" width="76.88" height="277.60" fill="#7c3aed" rx="5"/>
+<text x="550.31" y="145.40" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">0.683</text>
+<rect x="605.62" y="76.00" width="76.88" height="354.00" fill="#16a34a" rx="5"/>
+<text x="644.06" y="69.00" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">0.871</text>
+<rect x="699.38" y="417.42" width="76.88" height="12.58" fill="#dc2626" rx="5"/>
+<text x="737.81" y="410.42" text-anchor="middle" font-family="Arial" font-size="12" fill="#0f172a">0.031</text>
+<rect x="860" y="64" width="16" height="16" fill="#7c3aed" rx="3"/>
+<text x="884" y="77" font-family="Arial" font-size="14" fill="#0f172a">Avg sentiment</text>
+<rect x="860" y="90" width="16" height="16" fill="#16a34a" rx="3"/>
+<text x="884" y="103" font-family="Arial" font-size="14" fill="#0f172a">Positive rate</text>
+<rect x="860" y="116" width="16" height="16" fill="#dc2626" rx="3"/>
+<text x="884" y="129" font-family="Arial" font-size="14" fill="#0f172a">Negative rate</text>
+</svg>
