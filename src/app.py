@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 SCORES_PATH = ROOT / "analysis_outputs" / "scoring" / "store_score_explanations.csv"
 DEFAULT_PORT = 8765
 
