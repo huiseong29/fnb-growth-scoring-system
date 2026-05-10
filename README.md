@@ -22,8 +22,8 @@
 - `analysis_outputs/seoul_external_modeling/`: 서울 외부 상권 변수 결합 모델링 결과
 - `analysis_outputs/scoring/`: 최종 GroMong Score 및 매장별 설명
 - `analysis_outputs/demo/`: 데모 서버 검증 및 사용 가이드
-- `final_outputs_index.md`: 전체 산출물 위치와 설명
-- `score_design_rationale.md`: 스코어 설계 및 가중치 근거
+- `docs/final_outputs_index.md`: 전체 산출물 위치와 설명
+- `docs/score_design_rationale.md`: 스코어 설계 및 가중치 근거
 
 ## 프로젝트 구조
 
@@ -45,9 +45,10 @@
 |   +-- run_imbalance_balanced_recommendations.py
 |   +-- app.py
 +-- analysis_outputs/
++-- docs/
 +-- data/              # 원본 데이터, Git 제외
 +-- external_data/     # 외부 상권 데이터, Git 제외
-+-- *.md
++-- README.md
 ```
 
 `data/`와 `external_data/`는 개인정보 및 원천 데이터 보호를 위해 Git에 업로드하지 않는다.
@@ -114,9 +115,9 @@ GroMong Score는 다음 지표를 결합한다.
 
 ## 문서
 
-- `project_plan.md`: 전체 실행 계획과 진행 상태
-- `project_proposal.md`: 문제 정의, 방법론, 결과 해석
-- `remaining_tasks.md`: 남은 작업 목록
-- `final_outputs_index.md`: 산출물 인덱스
-- `score_design_rationale.md`: 점수 설계 근거
-- `midterm_quality_boost_plan.md`: 중간 발표 보완 계획
+- `docs/project_plan.md`: 전체 실행 계획과 진행 상태
+- `docs/project_proposal.md`: 문제 정의, 방법론, 결과 해석
+- `docs/remaining_tasks.md`: 남은 작업 목록
+- `docs/final_outputs_index.md`: 산출물 인덱스
+- `docs/score_design_rationale.md`: 점수 설계 근거
+- `docs/midterm_quality_boost_plan.md`: 중간 발표 보완 계획

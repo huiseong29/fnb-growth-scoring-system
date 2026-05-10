@@ -14,13 +14,13 @@
 
 | ?Œì¼ | ?¤ëª… |
 | --- | --- |
-| `project_plan.md` | ?„ì²´ ?¤í–‰ ê³„íš, ?„ë£Œ ?íƒœ, ?¤ìŒ ?‘ì—… |
-| `project_proposal.md` | ?„ë¡œ?íŠ¸ ê¸°íš?? ë¬¸ì œ ?•ì˜, ë°©ë²•ë¡? ê²°ê³¼ ?´ì„ |
-| `remaining_tasks.md` | ?ìœ¼ë¡??¨ì? ?‘ì—… ì²´í¬ë¦¬ìŠ¤??|
-| `final_outputs_index.md` | ?„ì²´ ?°ì¶œë¬??¸ë±??|
+| `docs/project_plan.md` | ?„ì²´ ?¤í–‰ ê³„íš, ?„ë£Œ ?íƒœ, ?¤ìŒ ?‘ì—… |
+| `docs/project_proposal.md` | ?„ë¡œ?íŠ¸ ê¸°íš?? ë¬¸ì œ ?•ì˜, ë°©ë²•ë¡? ê²°ê³¼ ?´ì„ |
+| `docs/remaining_tasks.md` | ?ìœ¼ë¡??¨ì? ?‘ì—… ì²´í¬ë¦¬ìŠ¤??|
+| `docs/final_outputs_index.md` | ?„ì²´ ?°ì¶œë¬??¸ë±??|
 | `analysis_outputs/visualization_guide.md` | ëª¨ë“  ?œê°???Œì¼??ëª©ì , ?´ì„, ë°œí‘œ??ë¬¸ì¥ |
-| `score_design_rationale.md` | GroMong Score 5ê°?ì§€?˜ì? ê°€ì¤‘ì¹˜ ?¤ê³„ ê·¼ê±° |
-| `midterm_quality_boost_plan.md` | ì¤‘ê°„ë°œí‘œ 1???„ë¦¬?°ë? ?„í•œ ë³´ê°• ê³¼ì œ ë¡œë“œë§?|
+| `docs/score_design_rationale.md` | GroMong Score 5ê°?ì§€?˜ì? ê°€ì¤‘ì¹˜ ?¤ê³„ ê·¼ê±° |
+| `docs/midterm_quality_boost_plan.md` | ì¤‘ê°„ë°œí‘œ 1???„ë¦¬?°ë? ?„í•œ ë³´ê°• ê³¼ì œ ë¡œë“œë§?|
 
 ## 2. ?ë³¸ ?°ì´??
 ?„ì¹˜:
@@ -155,7 +155,7 @@
 | `store_scores.csv` | ë§¤ì¥ë³?GroMong Score, ?±ê¸‰, êµ¬ì„± ?ìˆ˜ |
 | `store_score_explanations.csv` | ë§¤ì¥ë³??ìˆ˜?€ ì£¼ìš” ê·¼ê±° 3ê°?|
 | `score_summary.md` | ?¤ì½”???°ì¶œ ?”ì•½ |
-| `score_design_rationale.md` | ?¤ì½”???¤ê³„ ê·¼ê±°, ì§€?˜ë³„ ?¬ìš© ë³€?? ?œê³„?€ ê³ ë„??ë°©í–¥ |
+| `docs/score_design_rationale.md` | ?¤ì½”???¤ê³„ ê·¼ê±°, ì§€?˜ë³„ ?¬ìš© ë³€?? ?œê³„?€ ê³ ë„??ë°©í–¥ |
 
 ?µì‹¬ ê²°ê³¼:
 
@@ -226,7 +226,7 @@
 ## 13. ì¤‘ê°„ë°œí‘œ ë³´ê°• ?°ì¶œë¬?
 | ?Œì¼ | ?¤ëª… |
 | --- | --- |
-| `midterm_quality_boost_plan.md` | ë¶€ì¡±í•œ ë¶€ë¶„ê³¼ ë³´ê°• ê³¼ì œ ?•ë¦¬ |
+| `docs/midterm_quality_boost_plan.md` | ë¶€ì¡±í•œ ë¶€ë¶„ê³¼ ë³´ê°• ê³¼ì œ ?•ë¦¬ |
 | `analysis_outputs/quality_boost/charts/quality_boost_roadmap.svg` | ì¤‘ê°„ë°œí‘œ ë³´ê°• ë¡œë“œë§??œê°??|
 | `analysis_outputs/quality_boost/quality_boost_visualization_guide.md` | ë³´ê°• ë¡œë“œë§??œê°???´ì„ |
 
@@ -250,10 +250,10 @@ http://127.0.0.1:8765
 
 ?ìœ¼ë¡??‘ì—… ?˜ë‚˜ë¥??„ë£Œ???Œë§ˆ???¤ìŒ??ë°˜ë“œ???…ë°?´íŠ¸?œë‹¤.
 
-- `project_plan.md`
-- `project_proposal.md`
-- `remaining_tasks.md`
-- `final_outputs_index.md`
+- `docs/project_plan.md`
+- `docs/project_proposal.md`
+- `docs/remaining_tasks.md`
+- `docs/final_outputs_index.md`
 - `analysis_outputs/visualization_guide.md`
 
 ?œê°?”ê? ?ì„±?˜ë©´ ë°˜ë“œ???¤ìŒ???¨ê»˜ ë¬¸ì„œ?”í•œ??
