@@ -1,4 +1,4 @@
-# Remaining Tasks
+﻿# Remaining Tasks
 
 이 문서는 현재 프로젝트에서 남은 작업을 실행 순서대로 정리한다.
 
@@ -411,3 +411,128 @@
 3. 그래프별 발표 멘트 작성
 4. 교수님 예상 질문과 방어 답변 작성
 5. 최종 보고서/발표자료 초안 작성
+
+## 2026-05-18 피드백 기반 코드 보완 완료
+
+상태: **완료**
+
+완료된 작업:
+
+- 리뷰 NLP 피처를 성장/비성장 분류 모델에 통합: **완료**
+- `growth_alpha_nlp` 모델 추가 및 기존 Growth Alpha 모델과 비교: **완료**
+- 최종 GroMong Score가 NLP 결합 분류 확률을 우선 사용하도록 변경: **완료**
+- 분류 확률 기반 ROI 시뮬레이션 추가: **완료**
+- 피드백 반영 방향 Markdown 문서 작성: **완료**
+
+생성/수정된 주요 파일:
+
+- `src/run_modeling.py`
+- `src/build_scores.py`
+- `src/run_roi_simulation.py`
+- `docs/feedback_based_code_enhancement.md`
+- `analysis_outputs/modeling/modeling_report.md`
+- `analysis_outputs/roi/roi_simulation_report.md`
+- `analysis_outputs/roi/roi_simulation_by_store.csv`
+- `analysis_outputs/roi/roi_simulation_summary.csv`
+- `analysis_outputs/roi/roi_top20_base.csv`
+
+핵심 결과:
+
+- Growth Alpha AUC: 0.6078
+- Growth Alpha + NLP AUC: 0.6148
+- Growth Alpha + NLP F1: 0.5250
+- 기본 ROI 시나리오에서 ROI 양수 매장: 844/1,246
+
+발표 포지셔닝:
+
+```text
+인과추론은 평균 도입 효과를 검증하는 보조 근거로 두고,
+최종 의사결정은 성장 유망 매장 분류 확률과 ROI 시뮬레이션을 결합해 설명한다.
+```
+
+## 2026-05-18 코멘트 반영 EDA 보강 완료
+
+상태: **완료**
+
+완료된 작업:
+
+- 코멘트별 반영 여부 매트릭스 작성: **완료**
+- 성장/비성장 핵심 지표 gap EDA 작성: **완료**
+- 리뷰 NLP 지표의 성장 라벨별 차이 EDA 작성: **완료**
+- 외부 상권 지표의 성장 라벨별 차이 EDA 작성: **완료**
+- 모델 AUC 개선 비교 EDA 작성: **완료**
+- 등급별 ROI 연결 EDA 작성: **완료**
+- 피드백 반영 EDA 시각화 6개 생성: **완료**
+
+생성된 주요 파일:
+
+- `src/run_feedback_eda.py`
+- `analysis_outputs/feedback_eda/feedback_eda_report.md`
+- `analysis_outputs/feedback_eda/comment_reflection_matrix.csv`
+- `analysis_outputs/feedback_eda/eda_label_gap_summary.csv`
+- `analysis_outputs/feedback_eda/eda_nlp_gap_summary.csv`
+- `analysis_outputs/feedback_eda/eda_external_gap_summary.csv`
+- `analysis_outputs/feedback_eda/eda_model_lift_summary.csv`
+- `analysis_outputs/feedback_eda/eda_roi_by_grade_summary.csv`
+- `analysis_outputs/feedback_eda/charts/`
+
+핵심 발표 수치:
+
+- 성장 그룹 평균 주문수는 비성장 그룹보다 148.13% 높음
+- 성장 그룹 평균 리뷰수는 비성장 그룹보다 69.12% 높음
+- Growth Alpha + NLP AUC: 0.6148
+- 기본 ROI 시나리오 A등급 평균 기대 ROI: 150,409원
+
+## 2026-05-18 피드백 EDA 시각화 리디자인 및 심화 분석 완료
+
+상태: **완료**
+
+완료된 작업:
+
+- `feedback_eda/charts` 전체 색상 팔레트 교체: **완료**
+- 모든 feedback EDA 차트를 라이트 카드형 발표 스타일로 재생성: **완료**
+- Cohen's d 효과크기 EDA 추가: **완료**
+- 모델 예측 확률 decile별 실제 성장률 lift 분석 추가: **완료**
+- GroMong Score decile profile 분석 추가: **완료**
+- NLP 상대 gap 분석 차트 추가: **완료**
+- 피드백 코멘트 반영 매트릭스 유지 및 보고서 업데이트: **완료**
+
+추가된 핵심 산출물:
+
+- `analysis_outputs/feedback_eda/charts/effect_size_heatmap.svg`
+- `analysis_outputs/feedback_eda/charts/model_decile_lift.svg`
+- `analysis_outputs/feedback_eda/charts/nlp_relative_gap.svg`
+- `analysis_outputs/feedback_eda/charts/score_decile_profile.svg`
+- `analysis_outputs/feedback_eda/eda_model_decile_lift.csv`
+- `analysis_outputs/feedback_eda/eda_score_decile_profile.csv`
+
+핵심 해석:
+
+```text
+EDA를 평균 차이 확인에서 끝내지 않고 효과크기, 예측 확률 decile lift, score decile profile, ROI 등급 검증까지 확장했다.
+따라서 코멘트에서 요구한 분류 중심 전환, 텍스트 신호 심화, 외부 상권 변수의 한계 있는 활용, ROI 연결이 각각 데이터 근거와 함께 설명된다.
+```
+
+
+## 2026-05-18 피드백 반영 및 EDA 상세 보고서 작성 완료
+
+상태: **완료**
+
+생성 파일:
+
+- `analysis_outputs/feedback_eda/feedback_reflection_detailed_report.md`
+
+포함 내용:
+
+- 피드백별 반영 요약표
+- 기존 한계와 보완 내용
+- EDA 설계 방향
+- 성장/비성장 운영 지표 차이 및 효과크기
+- 리뷰 텍스트 EDA
+- 외부 상권 EDA
+- 분류 모델 성능 및 예측 확률 구간별 실제 성장률
+- 등급별 기대 월간 투자효과
+- 최종 점수 구간 profile
+- 한계와 추가 고도화 방향
+
+이 보고서는 발표/최종 보고서에 그대로 붙일 수 있는 상세 Markdown 산출물로 사용한다.

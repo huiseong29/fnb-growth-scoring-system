@@ -1,0 +1,5 @@
+﻿grade,stores,avg_growth_probability,avg_expected_roi,median_expected_roi,positive_roi_stores,positive_roi_rate
+A,87,0.9014,150409.1563,157530.4657,87,1.0
+B,236,0.8692,140749.2453,146665.7426,235,0.9958
+C,359,0.7733,111980.6795,119901.5268,348,0.9694
+D,564,0.326,-22197.7635,-28717.1774,174,0.3085

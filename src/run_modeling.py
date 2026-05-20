@@ -1,10 +1,11 @@
-from pathlib import Path
+﻿from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
 
 PANEL_PATH = Path("analysis_outputs/store_month_panel.csv")
+NLP_FEATURE_PATH = Path("analysis_outputs/nlp/review_store_month_sentiment.csv")
 OUT_DIR = Path("analysis_outputs/modeling")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -40,6 +41,18 @@ GROWTH_NUMERIC = [
     "historical_internal_growth_alpha",
 ]
 
+NLP_NUMERIC = [
+    "avg_text_sentiment",
+    "text_review_count",
+    "positive_text_rate",
+    "negative_text_rate",
+    "taste_rate",
+    "portion_rate",
+    "delivery_rate",
+    "price_rate",
+    "service_rate",
+    "reorder_rate",
+]
 CATEGORICAL = [
     "brand",
     "category",
@@ -48,6 +61,18 @@ CATEGORICAL = [
     "promo_phrase_enabled",
     "persona_tone_enabled",
 ]
+
+
+def add_optional_nlp_features(df):
+    if not NLP_FEATURE_PATH.exists():
+        return df, []
+
+    nlp = pd.read_csv(NLP_FEATURE_PATH, encoding="utf-8-sig")
+    keep = ["platform_shop_id", "year_month"] + [c for c in NLP_NUMERIC if c in nlp.columns]
+    nlp = nlp[keep].drop_duplicates(["platform_shop_id", "year_month"])
+    merged = df.merge(nlp, on=["platform_shop_id", "year_month"], how="left")
+    available = [c for c in NLP_NUMERIC if c in merged.columns]
+    return merged, available
 
 
 def sigmoid(z):
@@ -223,14 +248,15 @@ def write_report(metrics_df):
     best = metrics_df.sort_values("auc", ascending=False).iloc[0]
     baseline = metrics_df[metrics_df["model"] == "baseline"].iloc[0]
     growth = metrics_df[metrics_df["model"] == "growth_alpha"].iloc[0]
+    nlp = metrics_df[metrics_df["model"] == "growth_alpha_nlp"]
     lines = [
         "# Modeling Summary",
         "",
         "## 목적",
         "",
-        "이번 모델링의 목적은 내부 변수만 사용한 Baseline 모델과 과거 기반 Growth Alpha 변수를 추가한 모델을 비교하는 것이다.",
+        "이번 모델링의 목적은 성장/비성장 **분류**에 집중해 내부 변수만 사용한 Baseline, 과거 기반 Growth Alpha 모델, 리뷰 원문 NLP 피처 결합 모델을 비교하는 것이다.",
         "",
-        "프로젝트 차별점은 단순 인기 매장 예측이 아니라 브랜드·카테고리 효과를 보정한 초과 성장 잠재력을 활용하는 데 있다.",
+        "프로젝트 차별점은 단순 인기 매장 예측이 아니라 브랜드·카테고리 효과를 보정한 초과 성장 잠재력과 고객 리뷰 텍스트 신호를 함께 활용하는 데 있다.",
         "",
         "## 데이터 분할",
         "",
@@ -248,26 +274,45 @@ def write_report(metrics_df):
         f"- Growth Alpha F1: {growth['f1']:.4f}",
         f"- 더 높은 AUC 모델: {best['model']}",
         "",
-        "## 해석",
+        "## 리뷰 텍스트 피처 통합",
         "",
     ]
+    if not nlp.empty:
+        n = nlp.iloc[0]
+        lines.extend(
+            [
+                f"- Growth Alpha + NLP AUC: {n['auc']:.4f}",
+                f"- Growth Alpha + NLP F1: {n['f1']:.4f}",
+                f"- Growth Alpha + NLP Top100 Precision: {n.get('top100_precision', 0):.4f}",
+                "- 사용 피처: 평균 텍스트 감성, 긍정/부정 리뷰율, 맛·양·배달·가격·서비스·재주문 주제 언급률",
+                "",
+            ]
+        )
+    else:
+        lines.extend(["- NLP 집계 파일이 없어 이번 실행에서는 NLP 결합 모델을 생략했다.", ""])
+    lines.extend(["## 해석", ""])
     if growth["auc"] > baseline["auc"]:
         lines.append("과거 기반 Growth Alpha 변수를 추가했을 때 AUC가 개선되었다. 이는 브랜드·카테고리 보정 성장 신호가 성장 유망 매장 예측에 일부 기여한다는 근거로 사용할 수 있다.")
     else:
         lines.append("과거 기반 Growth Alpha 변수를 추가했을 때 AUC 개선은 확인되지 않았다. 이 경우 Growth Alpha는 예측 입력보다는 결과 해석과 스코어 설명 요소로 활용하고, 모델 성능은 주문·리뷰·운영 변수 중심으로 설명하는 편이 타당하다.")
+    if not nlp.empty:
+        if nlp.iloc[0]["auc"] >= growth["auc"]:
+            lines.append("리뷰 텍스트 피처를 결합한 모델이 Growth Alpha 단독 모델보다 AUC가 높거나 같았다. 댓글 주체 분리와 함께 리뷰 원문의 고객 반응을 분류 모델에 직접 넣는 보완 방향이 타당하다.")
+        else:
+            lines.append("리뷰 텍스트 피처를 결합했을 때 AUC가 낮아졌다. 현재 사전 기반 NLP는 설명 피처로 유지하고, 향후 임베딩/문장 분류 모델로 텍스트 신호를 고도화하는 편이 타당하다.")
     lines.extend(
         [
             "",
             "## 다음 작업",
             "",
-            "서울 매장 211개 subset에서 외부 상권 변수 추가 전후 성능을 비교한다. 이 단계가 외부 데이터의 실질적 기여도를 검증하는 핵심이다.",
+            "서울 매장 211개 subset에서 외부 상권 변수 추가 전후 성능을 비교하고, 최종 점수에서는 분류 확률과 기대 투자효과를 ROI 시뮬레이션으로 연결한다.",
         ]
     )
     (OUT_DIR / "modeling_report.md").write_text("\n".join(lines), encoding="utf-8")
 
-
 def main():
     df = pd.read_csv(PANEL_PATH, encoding="utf-8-sig")
+    df, nlp_cols = add_optional_nlp_features(df)
     df = df[df["is_label_valid"] == 1].copy()
     df[TARGET] = pd.to_numeric(df[TARGET], errors="coerce").astype(int)
 
@@ -278,11 +323,17 @@ def main():
     preds = []
     coefs = []
     tops = []
-    for name, numeric_cols in [
+    model_specs = [
         ("baseline", BASE_NUMERIC),
         ("growth_alpha", BASE_NUMERIC + GROWTH_NUMERIC),
-    ]:
+    ]
+    if nlp_cols:
+        model_specs.append(("growth_alpha_nlp", BASE_NUMERIC + GROWTH_NUMERIC + nlp_cols))
+
+    for name, numeric_cols in model_specs:
         metrics, pred, coef, top = evaluate_model(name, train, test, numeric_cols, CATEGORICAL)
+        top100 = top[top["top_n"] == min(100, len(test))]
+        metrics["top100_precision"] = float(top100["precision_at_n"].iloc[0]) if not top100.empty else np.nan
         results.append(metrics)
         preds.append(pred)
         coefs.append(coef)

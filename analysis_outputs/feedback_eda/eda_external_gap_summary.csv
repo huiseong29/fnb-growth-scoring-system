@@ -1,0 +1,5 @@
+﻿metric,non_growth_mean,growth_mean,absolute_gap,relative_gap_pct
+market_q4_sales_amount,106285599450.4152,135621680546.8043,29336081096.3891,27.6
+market_q4_sales_count,3243684.1952,4050903.7105,807219.5153,24.89
+market_q4_avg_ticket,30493.7338,31537.6868,1043.953,3.42
+store_vs_market_ticket_ratio,0.923,0.8628,-0.0602,-6.52

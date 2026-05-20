@@ -1,0 +1,4 @@
+﻿model,auc,f1,top100_precision,auc_lift_vs_baseline
+baseline,0.606,0.5173,0.4,0.0
+growth_alpha,0.6078,0.5169,0.42,0.0018
+growth_alpha_nlp,0.6148,0.525,0.4,0.0088

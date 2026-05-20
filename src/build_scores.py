@@ -1,4 +1,4 @@
-from pathlib import Path
+﻿from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -82,8 +82,11 @@ def main():
     panel = pd.read_csv(PANEL_PATH, encoding="utf-8-sig")
     latest, latest_month = latest_valid_rows(panel)
 
-    pred = pd.read_csv(MODEL_PRED_PATH, encoding="utf-8-sig")
-    pred = pred[(pred["model"] == "growth_alpha") & (pred["year_month"] == latest_month)][
+    pred_all = pd.read_csv(MODEL_PRED_PATH, encoding="utf-8-sig")
+    model_priority = ["growth_alpha_nlp", "growth_alpha"]
+    available_models = pred_all["model"].dropna().unique().tolist()
+    selected_model = next((m for m in model_priority if m in available_models), "growth_alpha")
+    pred = pred_all[(pred_all["model"] == selected_model) & (pred_all["year_month"] == latest_month)][
         ["platform_shop_id", "year_month", "growth_probability"]
     ].rename(columns={"growth_probability": "model_growth_probability"})
 
@@ -95,9 +98,11 @@ def main():
     score_df = latest.merge(pred, on=["platform_shop_id", "year_month"], how="left")
     score_df = score_df.merge(seoul_pred, on=["platform_shop_id", "year_month"], how="left")
     score_df["is_seoul_external"] = score_df["seoul_external_growth_probability"].notna().astype(int)
+    score_df["selected_prediction_model"] = selected_model
     score_df["final_growth_probability"] = score_df["seoul_external_growth_probability"].fillna(score_df["model_growth_probability"])
 
     numeric_cols = [
+        "selected_prediction_model",
         "final_growth_probability",
         "historical_internal_growth_alpha",
         "historical_review_growth_3m",
@@ -172,6 +177,7 @@ def main():
         "sido",
         "sigungu",
         "experiment_group",
+        "selected_prediction_model",
         "final_growth_probability",
         "probability_score",
         "growth_alpha_score",
@@ -214,12 +220,13 @@ def main():
         "",
         "## 목적",
         "",
-        "모델 성장 확률, 과거 기반 Growth Alpha, 리뷰 성장, 운영역량, 안정성을 결합해 매장별 0~100점 GroMong Score를 산출했다.",
+        "모델 성장 확률, 과거 기반 Growth Alpha, 리뷰 텍스트 신호가 반영된 분류 확률, 리뷰 성장, 운영역량, 안정성을 결합해 매장별 0~100점 GroMong Score를 산출했다.",
         "",
         "## 산출 범위",
         "",
         f"- 기준 월: {summary['latest_month']}",
         f"- 점수 산출 매장 수: {summary['stores']}",
+        f"- 기본 분류 모델: {selected_model}",
         f"- 평균 점수: {summary['avg_score']}",
         f"- 중앙값 점수: {summary['median_score']}",
         f"- 최고 점수: {summary['top_score']}",
@@ -247,3 +254,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

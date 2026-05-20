@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="604.890625pt" height="337.197969pt" viewBox="0 0 604.890625 337.197969" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-05-18T16:43:22.141415</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 337.197969 
+L 604.890625 337.197969 
+L 604.890625 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 57.715625 298.869844 
+L 597.690625 298.869844 
+L 597.690625 23.069844 
+L 57.715625 23.069844 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 331.420201 286.33348 
+L 317.306928 286.33348 
+L 317.306928 256.836154 
+L 331.420201 256.836154 
+z
+" clip-path="url(#p107301e16e)" style="fill: #79706e"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 331.420201 249.461822 
+L 454.954902 249.461822 
+L 454.954902 219.964496 
+L 331.420201 219.964496 
+z
+" clip-path="url(#p107301e16e)" style="fill: #b07aa1"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 331.420201 212.590165 
+L 82.259943 212.590165 
+L 82.259943 183.092838 
+L 331.420201 183.092838 
+z
+" clip-path="url(#p107301e16e)" style="fill: #79706e"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 331.420201 175.718507 
+L 431.43278 175.718507 
+L 431.43278 146.221181 
+L 331.420201 146.221181 
+z
+" clip-path="url(#p107301e16e)" style="fill: #b07aa1"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 331.420201 138.846849 
+L 483.239528 138.846849 
+L 483.239528 109.349523 
+L 331.420201 109.349523 
+z
+" clip-path="url(#p107301e16e)" style="fill: #b07aa1"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 331.420201 101.975191 
+L 558.161844 101.975191 
+L 558.161844 72.477865 
+L 331.420201 72.477865 
+z
+" clip-path="url(#p107301e16e)" style="fill: #b07aa1"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 331.420201 65.103534 
+L 573.146307 65.103534 
+L 573.146307 35.606207 
+L 331.420201 35.606207 
+z
+" clip-path="url(#p107301e16e)" style="fill: #b07aa1"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 99.102944 298.869844 
+L 99.102944 23.069844 
+" clip-path="url(#p107301e16e)" style="fill: none; stroke: #dddddd; stroke-opacity: 0.8; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m4602ac25ca" d="M 0 0 
+L 0 3.5 
+" style="stroke: #333333; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m4602ac25ca" x="99.102944" y="298.869844" style="fill: #333333; stroke: #333333; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #333333" x="99.102944" y="313.462031" transform="rotate(-0 99.102944 313.462031)">-0.4</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 215.261573 298.869844 
+L 215.261573 23.069844 
+" clip-path="url(#p107301e16e)" style="fill: none; stroke: #dddddd; stroke-opacity: 0.8; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m4602ac25ca" x="215.261573" y="298.869844" style="fill: #333333; stroke: #333333; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #333333" x="215.261573" y="313.462031" transform="rotate(-0 215.261573 313.462031)">-0.2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 331.420201 298.869844 
+L 331.420201 23.069844 
+" clip-path="url(#p107301e16e)" style="fill: none; stroke: #dddddd; stroke-opacity: 0.8; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m4602ac25ca" x="331.420201" y="298.869844" style="fill: #333333; stroke: #333333; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #333333" x="331.420201" y="313.462031" transform="rotate(-0 331.420201 313.462031)">0.0</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 447.57883 298.869844 
+L 447.57883 23.069844 
+" clip-path="url(#p107301e16e)" style="fill: none; stroke: #dddddd; stroke-opacity: 0.8; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m4602ac25ca" x="447.57883" y="298.869844" style="fill: #333333; stroke: #333333; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #333333" x="447.57883" y="313.462031" transform="rotate(-0 447.57883 313.462031)">0.2</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 563.737458 298.869844 
+L 563.737458 23.069844 
+" clip-path="url(#p107301e16e)" style="fill: none; stroke: #dddddd; stroke-opacity: 0.8; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m4602ac25ca" x="563.737458" y="298.869844" style="fill: #333333; stroke: #333333; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: middle; fill: #333333" x="563.737458" y="313.462031" transform="rotate(-0 563.737458 313.462031)">0.4</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: middle" x="327.703125" y="327.633906" transform="rotate(-0 327.703125 327.633906)">효과크기(d)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11">
+      <defs>
+       <path id="me94d3fbb58" d="M 0 0 
+L -3.5 0 
+" style="stroke: #333333; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#me94d3fbb58" x="57.715625" y="271.584817" style="fill: #333333; stroke: #333333; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: end; fill: #333333" x="50.715625" y="275.380911" transform="rotate(-0 50.715625 275.380911)">과거 알파</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#me94d3fbb58" x="57.715625" y="234.713159" style="fill: #333333; stroke: #333333; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: end; fill: #333333" x="50.715625" y="238.509253" transform="rotate(-0 50.715625 238.509253)">성장 알파</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#me94d3fbb58" x="57.715625" y="197.841502" style="fill: #333333; stroke: #333333; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: end; fill: #333333" x="50.715625" y="201.637595" transform="rotate(-0 50.715625 201.637595)">응답 지연</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#me94d3fbb58" x="57.715625" y="160.969844" style="fill: #333333; stroke: #333333; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: end; fill: #333333" x="50.715625" y="164.765938" transform="rotate(-0 50.715625 164.765938)">답글률</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#me94d3fbb58" x="57.715625" y="124.098186" style="fill: #333333; stroke: #333333; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: end; fill: #333333" x="50.715625" y="127.89428" transform="rotate(-0 50.715625 127.89428)">리뷰수</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#me94d3fbb58" x="57.715625" y="87.226528" style="fill: #333333; stroke: #333333; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: end; fill: #333333" x="50.715625" y="91.022622" transform="rotate(-0 50.715625 91.022622)">매출</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#me94d3fbb58" x="57.715625" y="50.35487" style="fill: #333333; stroke: #333333; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 10px; font-family: 'Malgun Gothic'; text-anchor: end; fill: #333333" x="50.715625" y="54.150964" transform="rotate(-0 50.715625 54.150964)">주문수</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_18">
+    <path d="M 331.420201 298.869844 
+L 331.420201 23.069844 
+" clip-path="url(#p107301e16e)" style="fill: none; stroke: #666666; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 57.715625 298.869844 
+L 57.715625 23.069844 
+" style="fill: none; stroke: #bbbbbb; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 57.715625 298.869844 
+L 597.690625 298.869844 
+" style="fill: none; stroke: #bbbbbb; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'Malgun Gothic'; text-anchor: middle" x="327.703125" y="17.069844" transform="rotate(-0 327.703125 17.069844)">지표별 효과크기</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p107301e16e">
+   <rect x="57.715625" y="23.069844" width="539.975" height="275.8"/>
+  </clipPath>
+ </defs>
+</svg>
