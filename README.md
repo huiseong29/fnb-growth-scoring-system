@@ -1,72 +1,111 @@
-﻿# GroMong Growth Candidate Decision-Support PoC
+﻿# 洹몃줈紐??ㅼ퐫??
 
-GroMong Score는 F&B 매장의 성장 후보군을 calibrated model probability로 우선순위화하고, 리뷰·운영·안정성 신호를 explanation index로 분해해 투자 검토를 보조하는 ML decision-support PoC입니다.
+> **AI 湲곕컲 F&B ?깆옣 ?좊쭩 留ㅼ옣 ?ㅼ퐫?대쭅 ?쒖뒪??*  
+> 瑜대そ 罹≪뒪???붿옄??怨쇱젣 쨌 2026 / F&B 留덉씠?щ줈???횞 AI ?뚭퀬由ъ쬁 ?곌뎄媛쒕컻
 
-## Current Freeze Definition
+?앸떦???좎슜?먯닔泥섎읆 留ㅼ옣???깆옣 媛?μ꽦??0-100?먯쑝濡??섏튂?뷀븳?? ?볤?紐??꾩엯 ?④낵瑜??멸낵異붾줎?쇰줈 利앸챸?섍퀬, ML濡??대뼡 留ㅼ옣???꾩엯 ??媛?????깆옣??蹂쇱? ?덉륫?쒕떎.
 
-- Predictive ranking is based on calibrated model probability.
-- Composite score is an explanation index, not the final predictive ranking score.
-- Grade and decision bands are priority review bands, not automatic investment decisions.
-- ROI is scenario-based decision support, not guaranteed return.
-- This is a production-style PoC, not a production system.
+<p>
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+  <img alt="pandas" src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white">
+  <img alt="NumPy" src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white">
+  <img alt="CSV" src="https://img.shields.io/badge/CSV%20Pipeline-4B5563?style=flat-square">
+  <img alt="Local Demo" src="https://img.shields.io/badge/Local%20Demo-111827?style=flat-square">
+</p>
 
-## Final Public Artifacts
+## Tech Stack
 
-| File | Role |
-| --- | --- |
-| `analysis_outputs/final_model_card.md` | Final model card and allowed/forbidden claims |
-| `analysis_outputs/final_freeze_manifest.json` | Frozen artifact manifest |
-| `analysis_outputs/final_public_artifact_gate_report.md` | Public artifact safety gate result |
-| `analysis_outputs/scoring/latest_shop_scores_public.csv` | Public-safe latest store priority ranking |
-| `analysis_outputs/scoring/store_ranking_topN.csv` | Public-safe TopN priority ranking |
-| `analysis_outputs/scoring/ranking_strategy_summary.md` | Ranking role redefinition summary |
-| `analysis_outputs/scoring/component_direction_audit.md` | Component direction audit summary |
-| `analysis_outputs/final_gap_closure_report.md` | Feedback gap closure report |
+| Layer             | Stack                                             |
+| ----------------- | ------------------------------------------------- |
+| Language          | Python                                            |
+| Data Processing   | pandas, NumPy                                     |
+| Modeling Pipeline | CSV-based feature engineering and scoring scripts |
+| Demo              | Python standard library HTTP server               |
+| Outputs           | CSV, Markdown, SVG                                |
 
-## Pipeline Summary
+## Overview
+
+洹몃줈紐??ㅼ퐫?대뒗 二쇰Ц, 由щ럭, ?댁쁺 ?묐떟, 釉뚮옖??移댄뀒怨좊━, ?몃? ?곴텒 ?곗씠?곕? 寃고빀???깆옣 媛?μ꽦???믪? F&B 留ㅼ옣???좊퀎?섎뒗 ?꾨줈?앺듃??
+
+理쒖쥌 寃곌낵??留ㅼ옣蹂??먯닔, ?깃툒, 異붿쿇 洹쇨굅瑜??쒓났?쒕떎.
+
+## Pipeline
 
 ```text
-raw/store-month data
--> feature engineering
--> growth classification model
--> calibration and validation audit
--> calibrated probability ranking
--> explanation index and decision-support artifacts
+raw data
+-> store-month panel
+-> growth modeling
+-> score calculation
+-> recommendation explanation
+-> demo
 ```
 
-## Score Semantics
+## Score Components
 
-| Public field | Meaning |
-| --- | --- |
-| `predictive_rank_score` | Calibrated model probability used for predictive ranking |
-| `predicted_priority_rank` | Final priority order for review |
-| `decision_band` | Priority review band |
-| `explanation_index` | Interpretable signal decomposition index |
-| `signal_decomposition_index` | Same role as explanation index, exported for clarity |
-| `action_band` | Operational review band by rank |
-| `risk_flag` | Direction/risk signal from component audit |
-| `top_positive_signal` | Strongest explanatory component |
-| `top_negative_signal` | Weakest explanatory component |
+| Component          | Description                              |
+| ------------------ | ---------------------------------------- |
+| Growth Probability | ?깆옣 留ㅼ옣?쇰줈 ?덉륫???뺣쪧                |
+| Growth Alpha       | 釉뚮옖??移댄뀒怨좊━ ?됯퇏 ?鍮?珥덇낵 ?깆옣 ?좏샇 |
+| Review Growth      | 理쒓렐 由щ럭 利앷? ?먮쫫                      |
+| Operation Quality  | ?묐떟瑜좉낵 ?묐떟 ?띾룄 湲곕컲 ?댁쁺 ??웾        |
+| Stability          | 二쇰Ц/由щ럭 蹂?숈꽦 湲곕컲 ?덉젙??            |
+| Market Fit         | ?몃? ?곴텒 ?곗씠??湲곕컲 ?쒖옣 ?곹빀??       |
 
-## Key Components
+## Structure
 
-| Component | Role |
-| --- | --- |
-| Calibrated model probability | Predictive ranking basis |
-| Growth Alpha | Explanation/risk signal after direction audit |
-| Review growth | Explanation/risk signal after direction audit |
-| Operation score | Explanation signal |
-| Stability score | Explanation/risk signal after direction audit |
-| Market fit | Seoul subset external-market support signal |
+```text
+.
++-- src/                 # analysis, modeling, scoring, demo
++-- docs/                # project documents
++-- analysis_outputs/    # generated outputs
++-- data/                # ignored raw data
++-- external_data/       # ignored external data
++-- README.md
+```
 
-## Important Limitations
+## Run
 
-- Composite score is not used as the predictive ranking score.
-- Some component scores were weakly or inversely aligned with the latest-month growth label, so they are used as explanation/risk signals only.
-- ROI is a scenario-based support layer and does not guarantee returns.
-- SHAP or model contribution should not be interpreted as causal attribution.
-- Public artifacts exclude label, future outcome, and treatment-related columns.
+```bash
+python src/build_store_month_panel.py
+python src/run_modeling.py
+python src/run_seoul_external_modeling.py
+python src/build_scores.py
+```
 
-## Reproducibility Note
+Demo:
 
-The project is frozen for final presentation. Do not add new models, change metrics, retune score weights, or change the ranking basis before submission.
+```bash
+python src/app.py
+```
+
+```text
+http://127.0.0.1:8765
+```
+
+## Key Files
+
+| Path                                 | Description                |
+| ------------------------------------ | -------------------------- |
+| `src/build_store_month_panel.py`     | 留ㅼ옣-??遺꾩꽍 ?⑤꼸 ?앹꽦     |
+| `src/run_modeling.py`                | Growth Alpha 紐⑤뜽留?       |
+| `src/run_seoul_external_modeling.py` | ?몃? ?곴텒 蹂??寃고빀 紐⑤뜽留?|
+| `src/build_scores.py`                | 理쒖쥌 ?먯닔 ?곗텧             |
+| `src/app.py`                         | 濡쒖뺄 ?곕え ?쒕쾭             |
+| `docs/final_outputs_index.md`        | ?꾩껜 ?곗텧臾??몃뜳??        |
+| `docs/score_design_rationale.md`     | ?먯닔 ?ㅺ퀎 洹쇨굅             |
+
+## Data
+
+?먮낯 ?곗씠?곕뒗 ??μ냼???ы븿?섏? ?딅뒗??
+
+- `data/`
+- `external_data/`
+
+## Final Semantic Freeze Note
+
+- Predictive ranking is based on calibrated model probability.
+- Explanation index summarizes interpretable growth-related signals and is not the final predictive ranking score.
+- Grade bands are priority review bands, not automatic investment decisions.
+- SHAP is used as predictive contribution, not causal attribution.
+- ROI is scenario-based decision support, not guaranteed return.
+- Direction audit showed that some component scores, including Growth Alpha and stability, are weakly or inversely aligned with the latest-month growth label; this is why public ranking was redefined around calibrated probability.
