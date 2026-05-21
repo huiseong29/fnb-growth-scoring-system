@@ -1,4 +1,4 @@
-# GroMong Score Design Rationale
+﻿# GroMong Score Design Rationale
 
 이 문서는 GroMong Score의 5개 지수가 어떤 데이터, EDA 결과, 모델링 결과, 도메인 논리를 바탕으로 설계되었는지 정리한다.
 
@@ -122,7 +122,7 @@ composite_growth_score =
 
 - 현재 모델은 로지스틱 회귀 기반 파일럿 모델이다.
 - XGBoost, LightGBM, SHAP 기반 모델 고도화는 아직 수행하지 않았다.
-- 실제 투자 성공 라벨이 아니라 주문/매출/리뷰 기반 파생 라벨을 사용했다.
+- 실제 투자 성과 라벨이 아니라 주문/매출/리뷰 기반 성장 검토용 파생 라벨을 사용했다.
 
 ## 4.2 Growth Alpha 점수
 
@@ -397,7 +397,7 @@ store_vs_market_ticket_ratio =
 ```
 
 ```text
-이 점수는 실제 투자 성공을 보장합니다.
+이 점수는 투자 검토 우선순위를 보조하는 explanation index입니다.
 ```
 
 ```text
@@ -569,7 +569,7 @@ calibrated_score =
 주의할 표현:
 
 ```text
-보정 점수가 실제 투자 성공을 보장한다.
+보정 점수는 투자 검토 우선순위와 growth signal ranking을 보조한다.
 ```
 
 ```text
@@ -628,3 +628,13 @@ GroMong Score는 전체 성장 가능성 후보를 찾는 기준이고, 보정 �
 ```text
 불균형을 완전히 제거한 것은 아니지만, 원본-기존 Top100-보정 Top100-균형형 추천을 비교해 한계를 직접 진단하고 보완 방향을 제시했습니다.
 ```
+
+## Final Semantic Freeze Note
+
+- Predictive ranking is based on calibrated model probability.
+- Explanation index summarizes interpretable growth-related signals and is not the final predictive ranking score.
+- Grade bands are priority review bands, not automatic investment decisions.
+- SHAP is used as predictive contribution, not causal attribution.
+- ROI is scenario-based decision support, not guaranteed return.
+- Direction audit showed that some component scores, including Growth Alpha and stability, are weakly or inversely aligned with the latest-month growth label; this is why public ranking was redefined around calibrated probability.
+

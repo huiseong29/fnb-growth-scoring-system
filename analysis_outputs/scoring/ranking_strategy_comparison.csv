@@ -1,0 +1,4 @@
+﻿strategy,roc_auc,pr_auc,rank_stability_vs_current_composite,rank_stability_vs_calibrated_probability,grade_S,grade_A,grade_B,grade_C,grade_D,top20_hit_count,top20_lift,top50_hit_count,top50_lift,top100_hit_count,top100_lift,public_output_fit
+calibrated_probability_ranking,0.5281249477992149,0.27035859834905884,0.678392012655143,1.0,9,89,241,355,552,7,1.3418461538461537,13,0.9968,25,0.9584615384615385,best_for_predictive_ranking_but_needs_explanation_index
+current_composite_score_ranking,0.40564269606614883,0.211191229937729,1.0,0.678392012655143,9,89,241,355,552,1,0.1916923076923077,7,0.5367384615384616,12,0.46006153846153847,not_recommended_as_predictive_ranking
+hybrid_probability_primary_composite_support,0.5281249477992149,0.27035859834905884,0.678392012655143,1.0,9,89,241,355,552,7,1.3418461538461537,13,0.9968,25,0.9584615384615385,recommended_probability_primary_composite_explanation_only

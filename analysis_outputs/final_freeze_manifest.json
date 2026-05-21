@@ -1,0 +1,113 @@
+{
+  "run_date": "2026-05-21T10:39:15.197814+00:00",
+  "as_of_date": "2025-09",
+  "model_artifact": {
+    "path": "analysis_outputs/modeling/model_predictions.csv",
+    "exists": true,
+    "bytes": 2521773
+  },
+  "calibration_artifact": {
+    "path": "analysis_outputs/modeling/calibration_lift_table.csv",
+    "exists": true,
+    "bytes": 7178
+  },
+  "feature_schema": {
+    "predictive_rank_score": "calibrated model probability",
+    "explanation_index": "composite signal decomposition index, not predictive ranking score",
+    "signal_components": [
+      "probability_score",
+      "growth_alpha_score",
+      "review_growth_score",
+      "operation_score",
+      "stability_score",
+      "market_fit_score"
+    ]
+  },
+  "grade_bins": {
+    "decision_band": {
+      "Priority Review": "calibrated_probability >= 0.40",
+      "Watch": "0.30 <= calibrated_probability < 0.40",
+      "Monitor": "0.20 <= calibrated_probability < 0.30",
+      "Low Priority": "calibrated_probability < 0.20"
+    },
+    "action_band": {
+      "Immediate Review": "predicted_priority_rank <= 50",
+      "Secondary Review": "51 <= predicted_priority_rank <= 100",
+      "Monitor": "101 <= predicted_priority_rank <= 200",
+      "Backlog": "predicted_priority_rank > 200"
+    }
+  },
+  "public_output_files": [
+    {
+      "path": "analysis_outputs/scoring/latest_shop_scores_public.csv",
+      "exists": true,
+      "bytes": 470103
+    },
+    {
+      "path": "analysis_outputs/scoring/store_ranking_topN.csv",
+      "exists": true,
+      "bytes": 77264
+    }
+  ],
+  "validation_reports": [
+    {
+      "path": "analysis_outputs/modeling/model_validation_audit.csv",
+      "exists": true,
+      "bytes": 2685
+    },
+    {
+      "path": "analysis_outputs/modeling/group_holdout_metrics.csv",
+      "exists": true,
+      "bytes": 2867
+    },
+    {
+      "path": "analysis_outputs/modeling/calibration_lift_table.csv",
+      "exists": true,
+      "bytes": 7178
+    },
+    {
+      "path": "analysis_outputs/scoring/ranking_strategy_comparison.csv",
+      "exists": true,
+      "bytes": 914
+    }
+  ],
+  "score_direction_audit_files": [
+    {
+      "path": "analysis_outputs/scoring/component_direction_audit.csv",
+      "exists": true,
+      "bytes": 2562
+    },
+    {
+      "path": "analysis_outputs/scoring/component_direction_audit.md",
+      "exists": true,
+      "bytes": 3271
+    },
+    {
+      "path": "analysis_outputs/scoring/component_inversion_check.csv",
+      "exists": true,
+      "bytes": 1038
+    },
+    {
+      "path": "analysis_outputs/scoring/ranking_strategy_summary.md",
+      "exists": true,
+      "bytes": 3722
+    }
+  ],
+  "model_card": {
+    "path": "analysis_outputs/final_model_card.md",
+    "exists": true,
+    "bytes": 4098
+  },
+  "artifact_gate": {
+    "path": "analysis_outputs/final_public_artifact_gate_report.md",
+    "exists": true,
+    "bytes": 850
+  },
+  "known_limitations": [
+    "Composite score is explanation index, not predictive ranking score.",
+    "Some component directions are weak or reversed in latest-month audit.",
+    "ROI is scenario-based support, not guaranteed return.",
+    "External market variables are limited to Seoul matched subset.",
+    "No new model, weight retuning, or post-hoc AUC optimization in freeze step."
+  ]
+}

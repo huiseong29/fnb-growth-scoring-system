@@ -554,3 +554,11 @@ http://127.0.0.1:8765
 ```
 - 피드백 EDA 그래프는 `.venv` 가상환경의 `matplotlib`만 사용해 재생성했다.
 
+## Final Semantic Freeze Note
+
+- Predictive ranking is based on calibrated model probability.
+- Explanation index summarizes interpretable growth-related signals and is not the final predictive ranking score.
+- Grade bands are priority review bands, not automatic investment decisions.
+- SHAP is used as predictive contribution, not causal attribution.
+- ROI is scenario-based decision support, not guaranteed return.
+- Direction audit showed that some component scores, including Growth Alpha and stability, are weakly or inversely aligned with the latest-month growth label; this is why public ranking was redefined around calibrated probability.

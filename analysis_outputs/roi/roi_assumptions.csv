@@ -1,0 +1,4 @@
+﻿scenario,monthly_lift_orders,gross_margin_per_order,monthly_program_cost,scenario_role
+conservative,50,3000,120000,stress
+base,100,3000,120000,main
+causal_att_reference,114,3000,120000,att_reference_only

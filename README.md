@@ -1,102 +1,72 @@
-# 그로몽 스코어
+﻿# GroMong Growth Candidate Decision-Support PoC
 
-> **AI 기반 F&B 성장 유망 매장 스코어링 시스템**  
-> 르몽 캡스톤 디자인 과제 · 2026 / F&B 마이크로펀드 × AI 알고리즘 연구개발
+GroMong Score는 F&B 매장의 성장 후보군을 calibrated model probability로 우선순위화하고, 리뷰·운영·안정성 신호를 explanation index로 분해해 투자 검토를 보조하는 ML decision-support PoC입니다.
 
-식당판 신용점수처럼 매장의 성장 가능성을 0-100점으로 수치화한다. 댓글몽 도입 효과를 인과추론으로 증명하고, ML로 어떤 매장이 도입 시 가장 큰 성장을 볼지 예측한다.
+## Current Freeze Definition
 
-<p>
-  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
-  <img alt="pandas" src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white">
-  <img alt="NumPy" src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white">
-  <img alt="CSV" src="https://img.shields.io/badge/CSV%20Pipeline-4B5563?style=flat-square">
-  <img alt="Local Demo" src="https://img.shields.io/badge/Local%20Demo-111827?style=flat-square">
-</p>
+- Predictive ranking is based on calibrated model probability.
+- Composite score is an explanation index, not the final predictive ranking score.
+- Grade and decision bands are priority review bands, not automatic investment decisions.
+- ROI is scenario-based decision support, not guaranteed return.
+- This is a production-style PoC, not a production system.
 
-## Tech Stack
+## Final Public Artifacts
 
-| Layer             | Stack                                             |
-| ----------------- | ------------------------------------------------- |
-| Language          | Python                                            |
-| Data Processing   | pandas, NumPy                                     |
-| Modeling Pipeline | CSV-based feature engineering and scoring scripts |
-| Demo              | Python standard library HTTP server               |
-| Outputs           | CSV, Markdown, SVG                                |
+| File | Role |
+| --- | --- |
+| `analysis_outputs/final_model_card.md` | Final model card and allowed/forbidden claims |
+| `analysis_outputs/final_freeze_manifest.json` | Frozen artifact manifest |
+| `analysis_outputs/final_public_artifact_gate_report.md` | Public artifact safety gate result |
+| `analysis_outputs/scoring/latest_shop_scores_public.csv` | Public-safe latest store priority ranking |
+| `analysis_outputs/scoring/store_ranking_topN.csv` | Public-safe TopN priority ranking |
+| `analysis_outputs/scoring/ranking_strategy_summary.md` | Ranking role redefinition summary |
+| `analysis_outputs/scoring/component_direction_audit.md` | Component direction audit summary |
+| `analysis_outputs/final_gap_closure_report.md` | Feedback gap closure report |
 
-## Overview
-
-그로몽 스코어는 주문, 리뷰, 운영 응답, 브랜드/카테고리, 외부 상권 데이터를 결합해 성장 가능성이 높은 F&B 매장을 선별하는 프로젝트다.
-
-최종 결과는 매장별 점수, 등급, 추천 근거를 제공한다.
-
-## Pipeline
+## Pipeline Summary
 
 ```text
-raw data
--> store-month panel
--> growth modeling
--> score calculation
--> recommendation explanation
--> demo
+raw/store-month data
+-> feature engineering
+-> growth classification model
+-> calibration and validation audit
+-> calibrated probability ranking
+-> explanation index and decision-support artifacts
 ```
 
-## Score Components
+## Score Semantics
 
-| Component          | Description                              |
-| ------------------ | ---------------------------------------- |
-| Growth Probability | 성장 매장으로 예측될 확률                |
-| Growth Alpha       | 브랜드/카테고리 평균 대비 초과 성장 신호 |
-| Review Growth      | 최근 리뷰 증가 흐름                      |
-| Operation Quality  | 응답률과 응답 속도 기반 운영 역량        |
-| Stability          | 주문/리뷰 변동성 기반 안정성             |
-| Market Fit         | 외부 상권 데이터 기반 시장 적합도        |
+| Public field | Meaning |
+| --- | --- |
+| `predictive_rank_score` | Calibrated model probability used for predictive ranking |
+| `predicted_priority_rank` | Final priority order for review |
+| `decision_band` | Priority review band |
+| `explanation_index` | Interpretable signal decomposition index |
+| `signal_decomposition_index` | Same role as explanation index, exported for clarity |
+| `action_band` | Operational review band by rank |
+| `risk_flag` | Direction/risk signal from component audit |
+| `top_positive_signal` | Strongest explanatory component |
+| `top_negative_signal` | Weakest explanatory component |
 
-## Structure
+## Key Components
 
-```text
-.
-+-- src/                 # analysis, modeling, scoring, demo
-+-- docs/                # project documents
-+-- analysis_outputs/    # generated outputs
-+-- data/                # ignored raw data
-+-- external_data/       # ignored external data
-+-- README.md
-```
+| Component | Role |
+| --- | --- |
+| Calibrated model probability | Predictive ranking basis |
+| Growth Alpha | Explanation/risk signal after direction audit |
+| Review growth | Explanation/risk signal after direction audit |
+| Operation score | Explanation signal |
+| Stability score | Explanation/risk signal after direction audit |
+| Market fit | Seoul subset external-market support signal |
 
-## Run
+## Important Limitations
 
-```bash
-python src/build_store_month_panel.py
-python src/run_modeling.py
-python src/run_seoul_external_modeling.py
-python src/build_scores.py
-```
+- Composite score is not used as the predictive ranking score.
+- Some component scores were weakly or inversely aligned with the latest-month growth label, so they are used as explanation/risk signals only.
+- ROI is a scenario-based support layer and does not guarantee returns.
+- SHAP or model contribution should not be interpreted as causal attribution.
+- Public artifacts exclude label, future outcome, and treatment-related columns.
 
-Demo:
+## Reproducibility Note
 
-```bash
-python src/app.py
-```
-
-```text
-http://127.0.0.1:8765
-```
-
-## Key Files
-
-| Path                                 | Description                |
-| ------------------------------------ | -------------------------- |
-| `src/build_store_month_panel.py`     | 매장-월 분석 패널 생성     |
-| `src/run_modeling.py`                | Growth Alpha 모델링        |
-| `src/run_seoul_external_modeling.py` | 외부 상권 변수 결합 모델링 |
-| `src/build_scores.py`                | 최종 점수 산출             |
-| `src/app.py`                         | 로컬 데모 서버             |
-| `docs/final_outputs_index.md`        | 전체 산출물 인덱스         |
-| `docs/score_design_rationale.md`     | 점수 설계 근거             |
-
-## Data
-
-원본 데이터는 저장소에 포함하지 않는다.
-
-- `data/`
-- `external_data/`
+The project is frozen for final presentation. Do not add new models, change metrics, retune score weights, or change the ranking basis before submission.

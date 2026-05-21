@@ -60,9 +60,9 @@ def reason_text(row):
 
     if row.get("is_seoul_external", 0) == 1:
         if row.get("market_fit_score", 50) >= 70:
-            reasons.append("서울 동일 자치구·유사업종 상권 대비 객단가 경쟁력이 있음")
+            reasons.append("서울 상권 규모와 가격 포지션이 비교적 적합함")
         elif row.get("market_fit_score", 50) <= 35:
-            reasons.append("서울 동일 자치구·유사업종 상권 대비 객단가 포지션이 약함")
+            reasons.append("서울 상권 규모 또는 가격 포지션 보조 지표가 약함")
 
     if row["stability_score"] >= 70:
         reasons.append("주문·리뷰 변동성이 낮아 안정성이 높음")
@@ -135,7 +135,9 @@ def main():
     score_df = score_df.merge(vol, on="platform_shop_id", how="left")
     score_df["stability_score"] = (0.6 * inverse_minmax(score_df["order_std"]) + 0.4 * inverse_minmax(score_df["review_std"])).fillna(50)
 
-    score_df["market_fit_score"] = minmax(score_df["store_vs_market_ticket_ratio"]).where(score_df["is_seoul_external"] == 1, 50)
+    market_scale_score = minmax(score_df["market_q4_avg_ticket"])
+    ticket_parity_score = inverse_minmax((score_df["store_vs_market_ticket_ratio"] - 1).abs())
+    score_df["market_fit_score"] = (0.45 * market_scale_score + 0.55 * ticket_parity_score).where(score_df["is_seoul_external"] == 1, 50)
 
     score_df["gromong_score"] = (
         0.35 * score_df["probability_score"]
@@ -243,7 +245,7 @@ def main():
             "",
             "최종 점수는 단순 매출 규모가 아니라 성장 확률, 브랜드·카테고리 보정 성장 신호, 리뷰 성장, 운영 대응력, 안정성을 결합한 결과다.",
             "",
-            "서울 매장은 외부 상권 평균 객단가 대비 위치를 10% 보정 항목으로 반영했다. 이는 본 프로젝트의 차별점인 상권 대비 평가를 점수에 포함하기 위한 장치다.",
+            "서울 매장은 상권 평균 객단가 자체와 상권 대비 가격 포지션을 분리해 10% 보정 항목으로만 반영했다. store_vs_market_ticket_ratio는 높을수록 좋은 값으로 단정하지 않고 1에 가까운 가격 적합성 신호로 제한 해석한다.",
         ]
     )
     (OUT_DIR / "score_summary.md").write_text("\n".join(lines), encoding="utf-8")
@@ -254,5 +256,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
 
 

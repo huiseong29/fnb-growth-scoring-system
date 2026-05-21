@@ -2,9 +2,7 @@
 
 ## 목적
 
-이번 검증의 목적은 서울 매장 211개 subset에서 외부 상권 데이터가 성장 유망 매장 예측에 실제로 기여하는지 확인하는 것이다.
-
-본 프로젝트의 차별점은 상권·브랜드·카테고리 효과를 고려한 Growth Alpha 기반 스코어링이므로, 외부 상권 변수의 실질적 기여도 검증이 중요하다.
+서울 211개 외부 상권 결합 subset에서 상권 변수가 성장 유망 매장 분류에 추가 설명력을 갖는지 점검했다.
 
 ## 데이터 범위
 
@@ -16,29 +14,27 @@
 
 ## 비교 모델
 
-- Seoul Internal: 내부 변수 + 과거 기반 Growth Alpha 변수
-- Seoul External: Seoul Internal + 외부 상권 변수
+- seoul_internal: 내부 운영/성장 이력 feature
+- seoul_external: 내부 feature + 서울 상권 매출/주문/객단가/상대 객단가 feature
 
 ## 주요 결과
 
-- Seoul Internal AUC: 0.5826
-- Seoul External AUC: 0.5995
-- Seoul Internal F1: 0.4807
-- Seoul External F1: 0.4773
+- Internal AUC: 0.5826
+- External AUC: 0.5995
+- AUC 변화: +0.0170
+- Internal PR-AUC: 0.3336
+- External PR-AUC: 0.3446
 
-## Top N 결과
+## 방향성 점검
 
-- seoul_internal Top 50 Precision: 0.360
-- seoul_internal Top 100 Precision: 0.340
-- seoul_internal Top 200 Precision: 0.325
-- seoul_external Top 50 Precision: 0.360
-- seoul_external Top 100 Precision: 0.370
-- seoul_external Top 200 Precision: 0.330
+| feature | 성장 평균 | 비성장 평균 | 차이 | 상관 | 해석 |
+| --- | ---: | ---: | ---: | ---: | --- |
+| store_vs_market_ticket_ratio | 0.8628 | 0.9230 | -0.0602 | -0.0683 | 단순히 높을수록 좋은 점수로 쓰기보다 1에 가까운 가격 적합성으로 해석 필요 |
+| market_q4_avg_ticket | 31537.6868 | 30493.7338 | 1043.9530 | 0.0802 | 높을수록 성장과 양의 방향 |
+| market_q4_sales_amount | 135621680546.8043 | 106285599450.4152 | 29336081096.3891 | 0.1347 | 높을수록 성장과 양의 방향 |
+| market_q4_sales_count | 4050903.7105 | 3243684.1952 | 807219.5153 | 0.1357 | 높을수록 성장과 양의 방향 |
 
 ## 해석
 
-외부 상권 변수를 추가했을 때 AUC가 개선되었다. 이는 상권 정보를 결합하는 것이 성장 유망 매장 선별에 실질적으로 기여할 수 있음을 보여준다.
-
-## 다음 작업
-
-모델 결과를 바탕으로 최종 GroMong Score 산출식을 만들고, 매장별 점수와 주요 근거를 생성한다.
+외부 상권 feature 추가 후 AUC가 개선되었지만, subset 규모가 작으므로 전사 모델의 핵심 근거가 아니라 서울 매장의 보조 설명 변수로만 사용한다.
+서울 211개 subset 한계 때문에 전국 점수에는 약한 보정으로만 반영하고, 발표에서는 외부 환경 변수를 연결했다는 방어 근거로 제시한다.
