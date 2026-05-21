@@ -1,4 +1,4 @@
-﻿# GroMong Score
+﻿# F&B 매장 성장 스코어링 시스템
 
 > **F&B 매장의 성장 후보군을 우선순위화하는 ML decision-support PoC**  
 > 르몽 캡스톤 디자인 과제 · 2026 / F&B 마이크로펀드 × AI 알고리즘 연구개발
